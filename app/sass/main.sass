@@ -1,0 +1,272 @@
+@import "fonts"
+// @import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+h2, h1, p
+	margin: 0
+	padding: 0
+
+a
+	color: inherit
+	text-decoration: none
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 18px
+	min-width: 320px
+	position: relative
+	line-height: 1.1
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: #fff
+	margin: 0
+	+r(768)
+		font-size: 14px
+	+r(550)
+		font-size: 12px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.title__text
+	text-align: center
+	font-size: 48px
+	font-family: $pixel
+	color: #ff3630
+	font-style: italic
+	.title__sub
+		font-style: normal
+	+r(550)
+		font-size: 28px
+
+.container
+	max-width: 1160px
+	padding: 0 1em
+	margin: 0 auto
+
+.start
+	padding: 35px 0 13em
+	background: url(../img/bg-top.png) no-repeat top center
+	background-size: cover
+	+r(425)
+		padding: 35px 0 1em
+
+.main__header
+	margin-bottom: 200px
+	+r(425)
+		margin-bottom: 75px
+
+.start__title
+	text-align: center
+	.title__text
+		font-size: 72px
+		color: #fff
+		line-height: .5
+		font-style: italic
+		font-weight: 100
+		+r(550)
+			font-size: 44px
+			line-height: 0.8
+		.text-active
+			color: #ff3630
+			font-size: 48px
+			display: inline-block
+			margin-bottom: 8px
+			position: relative
+			z-index: 10
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: -10px
+				background: #000
+				width: 200px
+				height: 30px
+				z-index: -1
+				clip-path: polygon(5% 0,100% 0,95% 100%,0 100%)
+
+	.title__sub
+		font-size: 24px
+		margin: 24px 0 160px
+		+r(550)
+			margin-bottom: 50px
+.join
+	text-align: center
+	.join__date
+		font-size: 36px
+		font-family: $pixel
+		text-transform: uppercase
+		font-style: italic
+		+r(425)
+			font-size: 22px
+	.join__text
+		margin-bottom: 28px
+		font-size: 24px
+		p
+			&:last-child
+				font-size: 18px
+				margin-top: 10px
+	.join__btn
+		margin-bottom: 70px
+
+.content__video
+	position: relative
+
+.join__btn
+	width: 280px
+	height: 63px
+	background: url(../img/btn.png) no-repeat top center
+	background-size: cover
+	color: #000
+	font-family: $pixel
+	font-size: 30px
+	line-height: 63px
+	box-shadow: 0px 9px 5px -1px rgba(0,0,0,0.25)
+	transition: all 0.5s
+	cursor: pointer
+	font-style: italic
+	position: absolute
+	top: 62%
+	left: 38%
+	z-index: 99
+	+r(768)
+		width: 235px
+		height: 55px
+		line-height: 55px
+		top: 40%
+		left: 33%
+		font-size: 22px
+	+r(425)
+		position: relative
+		top: 0
+		left: 0
+		margin: 30px auto 20px
+	a
+		display: block
+		text-align: center
+	&:hover
+		color: #00fffc
+		background: url(../img/btn-hover2.png) no-repeat top center
+		// background-size: cover
+
+// style for programs
+
+.programs
+	padding: 80px 0 110px
+	background: url(../img/challenge-bg.png) no-repeat top center
+	background-size: cover
+	+r(550)
+		padding: 50px 0 50px
+
+.content__video
+	width: 100%
+	position: relative
+	&:before
+		content: ''
+		display: table
+
+.video__youtube
+	position: relative
+	top: -245px
+	width: 70%
+	height: 0
+	padding-bottom: 40%
+	margin: 0 auto
+	+r(425)
+		top: 0
+		width: 90%
+		padding-bottom: 50%
+	.video__frame
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+.inner
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	overflow: hidden
+
+#vk_comments
+	width: 45%!important
+	max-height: 1000px
+	overflow-y: auto
+	+r(768)
+		width: 100%!important
+	iframe 
+		width: 100%
+
+.fb-comments
+	width: 49%
+	max-height: 1000px
+	overflow-y: auto
+	+r(768)
+		width: 100%!important
+
+
+.main-footer
+	background: #04042b
+	height: 130px
+	.container
+		display: flex
+		align-items: center
+		justify-content: space-between
+		height: 100%
+		+r(375)
+			flex-direction: column
+			justify-content: space-around
+
+.social-btn
+	display: flex
+	.btn__link
+		width: 40px
+		height: 40px
+		background: url(../img/icon-sprite.png) no-repeat
+		transition: all 0.5s
+		margin-right: 15px
+	.fb
+		background-position: -6px -46px
+		&:hover
+			background-position: -6px -4px
+	.tl
+		background-position: -57px -46px
+		&:hover
+			background-position: -57px -4px
+	.mail
+		background-position: -107px -46px
+		margin-right: 0
+		&:hover
+			background-position: -107px -4px
+
+
+@import "media" // Всегда в конце
